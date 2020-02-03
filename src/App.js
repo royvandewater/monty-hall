@@ -12,10 +12,18 @@ const initializeDoors = () => {
 }
 
 const nonChosenGoatDoors = doors => doors.filter(door => !door.chosen && door.contents === 'goat')
+const hideContentsIfClosed = ({chosen, contents, isOpen}) => 
+  isOpen 
+  ? {chosen, contents, isOpen} 
+  : {chosen, isOpen}
 
 const MontyHall = {
   setup: () => ({ 
     doors: initializeDoors(),
+  }),
+
+  playerView: (G) => ({
+    doors: G.doors.map(hideContentsIfClosed)
   }),
 
   phases: {
