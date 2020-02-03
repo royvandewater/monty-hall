@@ -49,7 +49,7 @@ const MontyHall = {
           G.doors.forEach(door => door.chosen = false)
           G.doors[id].chosen = true
           G.doors[id].isOpen = true
-          ctx.events.endGame();
+          ctx.events.endGame({winner: G.doors[id].contents === 'car'});
         }
       }
     }

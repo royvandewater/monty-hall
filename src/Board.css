@@ -1,10 +1,19 @@
 .board {
+  width: 648px;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.doors {
   display: flex;
 }
 
 .door {
-  height: 300px;
+  flex: 1;
   width: 200px;
+  height: 300px;
   border: solid 1px #999;
   margin: 8px;
   display: flex;
@@ -20,4 +29,8 @@
 .closed-door {
   background: #ddd;
   cursor: pointer;
+}
+
+.game-over-message {
+  text-align: center;
 }

@@ -15,10 +15,16 @@ const Door = ({chosen, contents, isOpen, onClick}) => {
 const Board = (props) => {
   const doors = props.G.doors;
   const clickDoor = props.moves.clickDoor
+  const gameover = props.ctx.gameover
 
-  return (<main className="board">
-    {doors.map((door, i) => <Door key={i} {...door} onClick={() => clickDoor(i)} />)}
-  </main>);
+  return (
+    <main className="board">
+      <h1 className="game-over-message">{gameover && `You ${gameover.winner ? 'Win' : 'Lose'}!`}&nbsp;</h1>
+      <div className="doors">
+        {doors.map((door, i) => <Door key={i} {...door} onClick={() => clickDoor(i)} />)}
+      </div>
+    </main>
+  );
 }
 
 export default Board;
