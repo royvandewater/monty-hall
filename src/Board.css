@@ -1,0 +1,19 @@
+.board {
+  display: flex;
+}
+
+.door {
+  height: 300px;
+  width: 200px;
+  border: solid 1px #999;
+  margin: 8px;
+}
+
+.chosen {
+  box-shadow: 0 0 10px 2px #00ddff;
+}
+
+.closed-door {
+  background: #ddd;
+  cursor: pointer;
+}

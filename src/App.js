@@ -1,15 +1,17 @@
 import { INVALID_MOVE } from 'boardgame.io/core';
 import { Client } from 'boardgame.io/react';
 
+import Board from './Board';
+
 const randomDoorIndex = doors => Math.floor(Math.random() * doors.length)
 
 const initializeDoors = () => {
-  const doors = Array(3).fill({}).map(() => ({contains: 'goat', isOpen: false, chosen: false}))
-  doors[randomDoorIndex(doors)].contains = "car"
+  const doors = Array(3).fill({}).map(() => ({contents: 'goat', isOpen: false, chosen: false}))
+  doors[randomDoorIndex(doors)].contents = "car"
   return doors;
 }
 
-const nonChosenGoatDoors = doors => doors.filter(door => !door.chosen && door.contains === 'goat')
+const nonChosenGoatDoors = doors => doors.filter(door => !door.chosen && door.contents === 'goat')
 
 const MontyHall = {
   setup: () => ({ 
@@ -46,6 +48,6 @@ const MontyHall = {
   },
 };
 
-const App = Client({ game: MontyHall, numPlayers: 1 });
+const App = Client({ game: MontyHall, board: Board, numPlayers: 1 });
 
 export default App;
