@@ -4,11 +4,12 @@ import { Debug } from 'boardgame.io/debug';
 
 import Board from './Board';
 
-const randomDoorIndex = doors => Math.floor(Math.random() * doors.length)
+const randomDoorIndex = (ctx, doors) => 
+  Math.floor(ctx.random.Number() * doors.length)
 
-const initializeDoors = () => {
+const initializeDoors = (ctx) => {
   const doors = Array(3).fill({}).map(() => ({contents: 'goat', isOpen: false, chosen: false}))
-  doors[randomDoorIndex(doors)].contents = "car"
+  doors[randomDoorIndex(ctx, doors)].contents = "car"
   return doors;
 }
 
@@ -19,8 +20,10 @@ const hideContentsIfClosed = ({chosen, contents, isOpen}) =>
   : {chosen, isOpen}
 
 const MontyHall = {
-  setup: () => ({ 
-    doors: initializeDoors(),
+  seed: Date.now(),
+
+  setup: (ctx) => ({
+    doors: initializeDoors(ctx),
   }),
 
   playerView: (G) => ({
@@ -39,9 +42,9 @@ const MontyHall = {
       next: 'finalChoice',
     },
     finalChoice: {
-      onBegin: G => {
+      onBegin: (G, ctx) => {
         const doors = nonChosenGoatDoors(G.doors)
-        doors[randomDoorIndex(doors)].isOpen = true
+        doors[randomDoorIndex(ctx, doors)].isOpen = true
       },
       moves: {
         chooseDoor: (G, ctx, id) => {
