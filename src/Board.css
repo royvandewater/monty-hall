@@ -1,6 +1,5 @@
 .board {
-  width: 648px;
-  height: 400px;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
@@ -8,10 +7,10 @@
 
 .doors {
   display: flex;
+  justify-content: space-around;
 }
 
 .door {
-  flex: 1;
   width: 200px;
   height: 300px;
   border: solid 1px #999;
@@ -20,6 +19,17 @@
   justify-content: center;
   align-items: center;
   font-size: xx-large;
+}
+
+@media (max-width: 880px) {
+  .doors {
+    flex-direction: column;
+  }
+
+  .door {
+    width: 100px;
+    height: 150px;
+  }
 }
 
 .chosen {
@@ -31,6 +41,6 @@
   cursor: pointer;
 }
 
-.game-over-message {
+.game-message {
   text-align: center;
 }
