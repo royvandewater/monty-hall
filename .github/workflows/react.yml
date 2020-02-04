@@ -18,6 +18,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
     - run: yarn run build
+      env:
+        PUBLIC_URL: /monty-hall
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v1.2.5
       with:
