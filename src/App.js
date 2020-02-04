@@ -56,6 +56,20 @@ const MontyHall = {
   },
 };
 
-const App = Client({ game: MontyHall, board: Board, numPlayers: 1 });
+const ai = {
+  enumerate: G => {
+    let moves = [];
+
+    G.doors.forEach((door, i) => {
+      if (door.isOpen) return;
+
+      moves.push({move: 'clickDoor', args: [i]})
+    })
+
+    return moves;
+  }
+}
+
+const App = Client({ game: MontyHall, board: Board, numPlayers: 1, ai });
 
 export default App;
