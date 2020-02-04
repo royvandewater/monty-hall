@@ -1,5 +1,6 @@
 import { INVALID_MOVE } from 'boardgame.io/core';
 import { Client } from 'boardgame.io/react';
+import { Debug } from 'boardgame.io/debug';
 
 import Board from './Board';
 
@@ -70,6 +71,6 @@ const ai = {
   }
 }
 
-const App = Client({ game: MontyHall, board: Board, numPlayers: 1, ai });
+const App = Client({ game: MontyHall, board: Board, numPlayers: 1, ai, debug: { impl: Debug } });
 
 export default App;
