@@ -14,14 +14,14 @@ const Door = ({chosen, contents, isOpen, onClick}) => {
 
 const Board = (props) => {
   const doors = props.G.doors;
-  const clickDoor = props.moves.clickDoor
+  const chooseDoor = props.moves.chooseDoor
   const gameover = props.ctx.gameover
 
   return (
     <main className="board">
       <h1 className="game-over-message">{gameover && `You ${gameover.winner ? 'Win' : 'Lose'}!`}&nbsp;</h1>
       <div className="doors">
-        {doors.map((door, i) => <Door key={i} {...door} onClick={() => clickDoor(i)} />)}
+        {doors.map((door, i) => <Door key={i} {...door} onClick={() => chooseDoor(i)} />)}
       </div>
     </main>
   );

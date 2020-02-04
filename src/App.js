@@ -31,7 +31,7 @@ const MontyHall = {
     initialChoice: {
       start: true,
       moves: {
-        clickDoor: (G, ctx, id) => {
+        chooseDoor: (G, ctx, id) => {
           G.doors[id].chosen = true
           ctx.events.endPhase();
         },
@@ -44,7 +44,7 @@ const MontyHall = {
         doors[randomDoorIndex(doors)].isOpen = true
       },
       moves: {
-        clickDoor: (G, ctx, id) => {
+        chooseDoor: (G, ctx, id) => {
           if (G.doors[id].isOpen) return INVALID_MOVE;
 
           G.doors.forEach(door => door.chosen = false)
@@ -64,7 +64,7 @@ const ai = {
     G.doors.forEach((door, i) => {
       if (door.isOpen) return;
 
-      moves.push({move: 'clickDoor', args: [i]})
+      moves.push({move: 'chooseDoor', args: [i]})
     })
 
     return moves;
