@@ -39,6 +39,7 @@
   cursor: pointer;
 }
 
-.game-message {
+.game-message,
+.previous-results {
   text-align: center;
 }

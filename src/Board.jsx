@@ -1,5 +1,5 @@
-import React from 'react';
-import './Board.css';
+import React from 'react'
+import './Board.css'
 
 const OpenDoor = ({chosen, contents}) => {
   if (chosen) return <div className="door chosen" >{contents}</div>
@@ -14,14 +14,14 @@ const Door = ({chosen, contents, isOpen, onClick}) => {
 
 const gameMessage = (phase, gameover) =>
   {
-    if (gameover) return `You ${gameover.winner ? 'Win' : 'Lose'}!`;
-    if (phase === 'finalChoice') return 'Keep your door or switch?';
-    return 'Pick a door';
+    if (gameover) return `You ${gameover.winner ? 'Win' : 'Lose'}!`
+    if (phase === 'finalChoice') return 'Keep your door or switch?'
+    return 'Pick a door'
   }
 
 const Board = (props) => {
-  const doors = props.G.doors;
-  const chooseDoor = props.moves.chooseDoor
+  const { doors } = props.G
+  const { chooseDoor } = props.moves
   const { gameover, phase } = props.ctx
 
   return (
@@ -31,7 +31,7 @@ const Board = (props) => {
         {doors.map((door, i) => <Door key={i} {...door} onClick={() => chooseDoor(i)} />)}
       </div>
     </main>
-  );
+  )
 }
 
-export default Board;
+export default Board
