@@ -25,8 +25,7 @@ jobs:
       env:
         PUBLIC_URL: /monty-hall
     - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v1.2.5
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        build_dir: build
-      env: 
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        deploy_key: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: build
