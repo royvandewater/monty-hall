@@ -1,5 +1,6 @@
-name: React Build & Deploy
-on: [push]
+name: React Build (No Deploy)
+
+on: [pull_request]
 
 jobs:
   build:
@@ -20,9 +21,3 @@ jobs:
     - run: yarn run build
       env:
         PUBLIC_URL: /monty-hall
-    - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v1.2.5
-      with:
-        build_dir: build
-      env: 
-        GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
