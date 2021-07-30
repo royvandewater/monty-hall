@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/monty-hall/static/css/main.17931833.chunk.css",
-    "main.js": "/monty-hall/static/js/main.ec2038a4.chunk.js",
-    "main.js.map": "/monty-hall/static/js/main.ec2038a4.chunk.js.map",
+    "main.js": "/monty-hall/static/js/main.4fbcab86.chunk.js",
+    "main.js.map": "/monty-hall/static/js/main.4fbcab86.chunk.js.map",
     "runtime-main.js": "/monty-hall/static/js/runtime-main.09f708a5.js",
     "runtime-main.js.map": "/monty-hall/static/js/runtime-main.09f708a5.js.map",
-    "static/js/2.eead54da.chunk.js": "/monty-hall/static/js/2.eead54da.chunk.js",
-    "static/js/2.eead54da.chunk.js.map": "/monty-hall/static/js/2.eead54da.chunk.js.map",
+    "static/js/2.ad05e778.chunk.js": "/monty-hall/static/js/2.ad05e778.chunk.js",
+    "static/js/2.ad05e778.chunk.js.map": "/monty-hall/static/js/2.ad05e778.chunk.js.map",
     "index.html": "/monty-hall/index.html",
-    "precache-manifest.ebb7d3d82bda6842a0babb134302b2ad.js": "/monty-hall/precache-manifest.ebb7d3d82bda6842a0babb134302b2ad.js",
+    "precache-manifest.7cb2e645278ca96e5daa5fa06e4e9134.js": "/monty-hall/precache-manifest.7cb2e645278ca96e5daa5fa06e4e9134.js",
     "service-worker.js": "/monty-hall/service-worker.js",
     "static/css/main.17931833.chunk.css.map": "/monty-hall/static/css/main.17931833.chunk.css.map",
-    "static/js/2.eead54da.chunk.js.LICENSE.txt": "/monty-hall/static/js/2.eead54da.chunk.js.LICENSE.txt"
+    "static/js/2.ad05e778.chunk.js.LICENSE.txt": "/monty-hall/static/js/2.ad05e778.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.09f708a5.js",
-    "static/js/2.eead54da.chunk.js",
+    "static/js/2.ad05e778.chunk.js",
     "static/css/main.17931833.chunk.css",
-    "static/js/main.ec2038a4.chunk.js"
+    "static/js/main.4fbcab86.chunk.js"
   ]
 }
