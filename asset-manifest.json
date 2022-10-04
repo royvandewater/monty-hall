@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/monty-hall/static/css/main.17931833.chunk.css",
-    "main.js": "/monty-hall/static/js/main.716df23a.chunk.js",
-    "main.js.map": "/monty-hall/static/js/main.716df23a.chunk.js.map",
-    "runtime-main.js": "/monty-hall/static/js/runtime-main.8c929a90.js",
-    "runtime-main.js.map": "/monty-hall/static/js/runtime-main.8c929a90.js.map",
-    "static/js/2.6fd3a91d.chunk.js": "/monty-hall/static/js/2.6fd3a91d.chunk.js",
-    "static/js/2.6fd3a91d.chunk.js.map": "/monty-hall/static/js/2.6fd3a91d.chunk.js.map",
+    "main.css": "/monty-hall/static/css/main.2832520c.css",
+    "main.js": "/monty-hall/static/js/main.6d233d0f.js",
     "index.html": "/monty-hall/index.html",
-    "precache-manifest.8e6ea2f884fec7e7452d00c9867250eb.js": "/monty-hall/precache-manifest.8e6ea2f884fec7e7452d00c9867250eb.js",
-    "service-worker.js": "/monty-hall/service-worker.js",
-    "static/css/main.17931833.chunk.css.map": "/monty-hall/static/css/main.17931833.chunk.css.map",
-    "static/js/2.6fd3a91d.chunk.js.LICENSE.txt": "/monty-hall/static/js/2.6fd3a91d.chunk.js.LICENSE.txt"
+    "main.2832520c.css.map": "/monty-hall/static/css/main.2832520c.css.map",
+    "main.6d233d0f.js.map": "/monty-hall/static/js/main.6d233d0f.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8c929a90.js",
-    "static/js/2.6fd3a91d.chunk.js",
-    "static/css/main.17931833.chunk.css",
-    "static/js/main.716df23a.chunk.js"
+    "static/css/main.2832520c.css",
+    "static/js/main.6d233d0f.js"
   ]
 }
