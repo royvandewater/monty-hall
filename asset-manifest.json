@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/monty-hall/static/css/main.2832520c.css",
-    "main.js": "/monty-hall/static/js/main.6d233d0f.js",
+    "main.js": "/monty-hall/static/js/main.8b94373e.js",
     "index.html": "/monty-hall/index.html",
     "main.2832520c.css.map": "/monty-hall/static/css/main.2832520c.css.map",
-    "main.6d233d0f.js.map": "/monty-hall/static/js/main.6d233d0f.js.map"
+    "main.8b94373e.js.map": "/monty-hall/static/js/main.8b94373e.js.map"
   },
   "entrypoints": [
     "static/css/main.2832520c.css",
-    "static/js/main.6d233d0f.js"
+    "static/js/main.8b94373e.js"
   ]
 }
