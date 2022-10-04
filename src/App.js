@@ -4,20 +4,20 @@ import { Debug } from 'boardgame.io/debug'
 
 import Board from './Board'
 
-const randomDoorIndex = (ctx, doors) => 
+const randomDoorIndex = (ctx, doors) =>
   Math.floor(ctx.random.Number() * doors.length)
 
 const initializeDoors = (ctx) => {
-  const doors = Array(3).fill({}).map(() => ({contents: 'goat', isOpen: false, chosen: false}))
+  const doors = Array(3).fill({}).map(() => ({ contents: 'goat', isOpen: false, chosen: false }))
   doors[randomDoorIndex(ctx, doors)].contents = "car"
   return doors
 }
 
 const nonChosenGoatDoors = doors => doors.filter(door => !door.chosen && door.contents === 'goat')
-const hideContentsIfClosed = ({chosen, contents, isOpen}) => 
-  isOpen 
-  ? {chosen, contents, isOpen} 
-  : {chosen, isOpen}
+const hideContentsIfClosed = ({ chosen, contents, isOpen }) =>
+  isOpen
+    ? { chosen, contents, isOpen }
+    : { chosen, isOpen }
 
 const MontyHall = {
   seed: Date.now(),
@@ -53,11 +53,27 @@ const MontyHall = {
           G.doors.forEach(door => door.chosen = false)
           G.doors[id].chosen = true
           G.doors[id].isOpen = true
-          ctx.events.endGame({winner: G.doors[id].contents === 'car'})
+          ctx.events.endGame({ winner: G.doors[id].contents === 'car' })
         }
       },
     }
   },
+  ai: {
+    enumerate: (G, ctx) => {
+      let moves = [];
+
+      G.doors.forEach((d, i) => {
+        if (d.isOpen) return;
+
+        moves.push({
+          move: 'chooseDoor',
+          args: [i],
+        })
+      })
+
+      return moves
+    }
+  }
 }
 
 const ai = {
@@ -67,7 +83,7 @@ const ai = {
     G.doors.forEach((door, i) => {
       if (door.isOpen) return
 
-      moves.push({move: 'chooseDoor', args: [i]})
+      moves.push({ move: 'chooseDoor', args: [i] })
     })
 
     return moves
