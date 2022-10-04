@@ -32,5 +32,11 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@testing-library/dom": "^8.18.1",
+    "eslint": "^8.24.0",
+    "eslint-config-react-app": "^7.0.1"
+  }
 }
