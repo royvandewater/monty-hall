@@ -34,7 +34,7 @@
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.29.6",
     "@testing-library/dom": "^8.18.1",
     "eslint": "^8.24.0",
     "eslint-config-react-app": "^7.0.1"
